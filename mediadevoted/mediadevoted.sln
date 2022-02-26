@@ -3,23 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mediadevoted", "mediadevoted.csproj", "{CC4F5970-0C68-4492-BFA3-C2F0E6905943}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mediadevoted", "mediadevoted.csproj", "{CC4F5970-0C68-4492-BFA3-C2F0E6905943}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apis", "Apis", "{377DB80A-8069-454D-81A2-66182113A72D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mediadevoted.api", "..\Apis\mediadevoted.api\mediadevoted.api.csproj", "{4560B7A0-E0A7-44B6-AD77-1C2F871D924D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mediadevoted.api", "..\Apis\mediadevoted.api\mediadevoted.api.csproj", "{4560B7A0-E0A7-44B6-AD77-1C2F871D924D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D4B0B47E-AB11-4139-A871-48AFF7118651}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mediadevoted.apis.tests", "..\Tests\mediadevoted.apis.tests\mediadevoted.apis.tests.csproj", "{758C785D-F009-421D-92C0-C402CEAF5B1F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Layer", "Data Layer", "{D5DED714-D920-4F57-89BE-3B0D343CA573}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mediadevoted.data.ef", "..\DataLayer\mediadevoted.data.ef\mediadevoted.data.ef.csproj", "{A3A4838F-FF7D-483C-A705-4BBD1476D032}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mediadevoted.data.ef", "..\DataLayer\mediadevoted.data.ef\mediadevoted.data.ef.csproj", "{A3A4838F-FF7D-483C-A705-4BBD1476D032}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{47349D2B-E889-44A1-A9E7-97B397D796FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mediadevoted.infrastructure", "..\Infrastructure\mediadevoted.infrastructure\mediadevoted.infrastructure.csproj", "{5525E81E-DFAA-46BA-8167-4B5FEFD502A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mediadevoted.infrastructure", "..\Infrastructure\mediadevoted.infrastructure\mediadevoted.infrastructure.csproj", "{5525E81E-DFAA-46BA-8167-4B5FEFD502A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{3AB40DA1-EB4D-48D0-AF3A-6FC28ADD5285}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mediadevoted.application", "..\Domain\mediadevoted.application\mediadevoted.application.csproj", "{C865B237-81E9-4ADC-983E-F317FB05920B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mediadevoted.domain", "..\mediadevoted.domain\mediadevoted.domain.csproj", "{541CA971-33A1-4FD8-86F1-57F305D28DBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mediadevoted.tests", "..\Tests\mediadevoted.tests\mediadevoted.tests.csproj", "{DD909C86-4AFC-4F49-9804-7686BFDCDAAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +41,6 @@ Global
 		{4560B7A0-E0A7-44B6-AD77-1C2F871D924D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4560B7A0-E0A7-44B6-AD77-1C2F871D924D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4560B7A0-E0A7-44B6-AD77-1C2F871D924D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{758C785D-F009-421D-92C0-C402CEAF5B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{758C785D-F009-421D-92C0-C402CEAF5B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{758C785D-F009-421D-92C0-C402CEAF5B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{758C785D-F009-421D-92C0-C402CEAF5B1F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A3A4838F-FF7D-483C-A705-4BBD1476D032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A3A4838F-FF7D-483C-A705-4BBD1476D032}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3A4838F-FF7D-483C-A705-4BBD1476D032}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,15 +49,29 @@ Global
 		{5525E81E-DFAA-46BA-8167-4B5FEFD502A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5525E81E-DFAA-46BA-8167-4B5FEFD502A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5525E81E-DFAA-46BA-8167-4B5FEFD502A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C865B237-81E9-4ADC-983E-F317FB05920B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C865B237-81E9-4ADC-983E-F317FB05920B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C865B237-81E9-4ADC-983E-F317FB05920B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C865B237-81E9-4ADC-983E-F317FB05920B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{541CA971-33A1-4FD8-86F1-57F305D28DBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{541CA971-33A1-4FD8-86F1-57F305D28DBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{541CA971-33A1-4FD8-86F1-57F305D28DBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{541CA971-33A1-4FD8-86F1-57F305D28DBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD909C86-4AFC-4F49-9804-7686BFDCDAAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD909C86-4AFC-4F49-9804-7686BFDCDAAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD909C86-4AFC-4F49-9804-7686BFDCDAAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD909C86-4AFC-4F49-9804-7686BFDCDAAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4560B7A0-E0A7-44B6-AD77-1C2F871D924D} = {377DB80A-8069-454D-81A2-66182113A72D}
-		{758C785D-F009-421D-92C0-C402CEAF5B1F} = {D4B0B47E-AB11-4139-A871-48AFF7118651}
 		{A3A4838F-FF7D-483C-A705-4BBD1476D032} = {D5DED714-D920-4F57-89BE-3B0D343CA573}
 		{5525E81E-DFAA-46BA-8167-4B5FEFD502A5} = {47349D2B-E889-44A1-A9E7-97B397D796FA}
+		{C865B237-81E9-4ADC-983E-F317FB05920B} = {3AB40DA1-EB4D-48D0-AF3A-6FC28ADD5285}
+		{541CA971-33A1-4FD8-86F1-57F305D28DBF} = {3AB40DA1-EB4D-48D0-AF3A-6FC28ADD5285}
+		{DD909C86-4AFC-4F49-9804-7686BFDCDAAC} = {D4B0B47E-AB11-4139-A871-48AFF7118651}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D24EDA40-7A76-41C8-A14E-07F33D325F00}

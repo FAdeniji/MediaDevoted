@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataLayer\mediadevoted.data.ef\mediadevoted.data.ef.csproj" />
+    <ProjectReference Include="..\..\Domain\mediadevoted.application\mediadevoted.application.csproj" />
+  </ItemGroup>
+
 </Project>
